@@ -1,0 +1,183 @@
+<!doctype html>
+<!--
+  Copyright 2015 Google Inc. All rights reserved.
+  Licensed under the Apache License, Version 2.0 (the "License");
+  you may not use this file except in compliance with the License.
+  You may obtain a copy of the License at
+      https://www.apache.org/licenses/LICENSE-2.0
+  Unless required by applicable law or agreed to in writing, software
+  distributed under the License is distributed on an "AS IS" BASIS,
+  WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+  See the License for the specific language governing permissions and
+  limitations under the License
+-->
+<html lang="en" ng-app="scotchApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="description" content="Learn how to use the Firebase platform on the Web">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Friendly Chat</title>
+
+  <!-- Disable tap highlight on IE -->
+  <meta name="msapplication-tap-highlight" content="no">
+
+  <!-- Web Application Manifest -->
+  <link rel="manifest" href="manifest.json">
+
+  <!-- Add to homescreen for Chrome on Android -->
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="application-name" content="Friendly Chat">
+  <meta name="theme-color" content="#303F9F">
+
+  <!-- Add to homescreen for Safari on iOS -->
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Friendly Chat">
+  <meta name="apple-mobile-web-app-status-bar-style" content="#303F9F">
+
+  <!-- Tile icon for Win8 -->
+  <meta name="msapplication-TileColor" content="#3372DF">
+  <meta name="msapplication-navbutton-color" content="#303F9F">
+
+  <!-- Material Design Lite -->
+  <!--link rel="stylesheet" href="code.getmdl.io.css"-->
+  <link rel="stylesheet" href="fonts.googleapis.css">
+  
+  
+  <script src="pages/js/jquery-3.1.1.min.js"> </script>
+  <script src="pages/js/angular.min.js"></script>
+  <script src="pages/js/angular-route.js"></script>
+  <script src="pages/js/script.js"></script>
+
+  <!-- App Styling -->
+  <!--link rel="stylesheet" href="fonts.googleapis2.css"-->
+  <!--link rel="stylesheet" href="styles/main.css"-->
+  
+  
+  <!-- SCROLLS -->
+  
+  <!--script src="pages/js/basket.js"> </script-->
+ 
+<!--script>
+		var urls = [
+	{ url : 'pages/js/jquery-3.1.1.min.js' },	
+    { url : 'pages/js/angular.min.js' },
+	{ url : 'pages/js/angular-route.js' },
+	{ url : 'pages/js/script.js' },
+	{url:'code.getmdl.io.material.js ' },
+	{url:'scripts/main.js'},
+	{url:'firebase_script.js'}
+	
+	
+	
+
+
+    
+];
+
+loadScripts(urls, function() { console.log('DONE'); });
+
+function loadScripts(scripts, onFinish) {
+    if(scripts.length === 0) {
+        onFinish();
+        return;
+    }
+    
+    var script = scripts[0];
+    scripts = scripts.slice(1);
+    
+    basket.require(script).then(function() { loadScripts(scripts, onFinish); });
+}
+
+
+
+</script-->
+
+  
+ <!--script src="pages/js/jquery-3.1.1.min.js"> </script-->
+
+ <link href="pages/css/style.css" rel='stylesheet' type='text/css' />
+
+
+  <link href="pages/css/bootstrap.css" rel='stylesheet' type='text/css' />
+	
+
+</head>
+<header class="">
+    
+      
+      <div id="" style="float:right;">
+        <div hidden id="user-pic"></div>
+        <div hidden id="user-name"></div>
+        <button hidden id="sign-out" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text">
+          Sign-out
+        </button>
+        <button hidden id="sign-in" class="mdl-button mdl-js-button mdl-js-ripple-effect mdl-color-text">
+          <i class="material-icons">account_circle</i>Sign-in with Google
+        </button>
+      </div>
+    
+  </header>
+
+<body ng-controller="mainController">
+
+
+  <!-- Header section containing logo -->
+  
+
+
+    
+
+      <!-- Messages container ------------------------->
+     
+          
+          <form id="message-form" action="#">
+            <div class="">
+              <div class="" type="" id="message"></div>
+          
+            </div>
+            
+          </form>
+          <form id="image-form" action="#">
+            <div id="mediaCapture" type="" accept=""></div>
+            
+			<div id="submitImage" title="" class=""></div>
+          
+		  </form>
+        <!-------------------------------------------->
+		
+		<div ng-view class="qwe" ></div>
+		
+
+     
+
+   
+  
+
+
+<!-- Firebase -->
+<!-- ***********************************************************************************************************************
+     * TODO(DEVELOPER): Paste the initialization snippet from: Firebase Console > Overview > Add Firebase to your web app. *
+     *********************************************************************************************************************** -->
+<script src="scripts/main.js"></script>
+<script src="firebase_script.js"></script>
+
+<script>
+
+  // Initialize Firebase
+  var config = {
+    apiKey: "AIzaSyAAmxlBl5q_Od0IO8DzEwfHXXgwMdP4W_E",
+    authDomain: "fir-auth-8c0b5.firebaseapp.com",
+    databaseURL: "https://fir-auth-8c0b5.firebaseio.com",
+    storageBucket: "fir-auth-8c0b5.appspot.com",
+    messagingSenderId: "692584938060"
+  };
+  firebase.initializeApp(config);
+</script>
+<script>
+		
+</script>
+</body>
+</html>

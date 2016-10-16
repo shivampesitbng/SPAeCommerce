@@ -1,0 +1,813 @@
+<style>
+@media (max-width: 767px) {
+    #catd { display: none; }
+}
+@media (min-width: 767px) {
+    #catm { display: none; }
+}
+@media (max-width: 767px) {
+    #cartd { display: none; }
+}
+@media (min-width: 767px) {
+    .cartm { display: none; }
+}
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+
+    margin: auto;
+    
+    border: 1px solid #888;
+    width: 80%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+div.scrollmenu {
+    background-color: #215050;
+    overflow: auto;
+    white-space: nowrap;
+	
+	}
+	
+
+div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 12px;
+    text-decoration: none;
+	
+}
+
+div.scrollmenu a:hover {
+    background-color: #777;
+}
+div.scrollmenu a:active, {
+  background-color: #777;
+}
+#footer {
+   position:fixed;
+   left:0px;
+   bottom:0px;
+   height:30px;
+   width:100%;
+background-color: #215050;
+
+}
+.clear {
+    clear:both;
+}
+
+
+.fixed {
+    position: fixed;
+    top:0; left:0;
+    width: 100%;
+z-index:10;	
+	
+	}
+
+
+.sticky-header {
+   
+   
+   
+    postion:fixed;
+}
+
+</style>
+
+
+<div   class="container-fluid"  >
+			<h1  style="text-align: center;"> Home | Add Items to Shopping Cart </h1>
+			<div class="row">
+				<div class="col-sm-1" ></div>
+				
+				<div class="col-sm-2" align="center" >
+				<div class="clear">
+			<div class="sticky-header" >	
+				<div class="scrollmenu" id="catm">
+				
+				  <a  onclick ="fruits()" style="cursor: pointer;">FRUITS</a>
+				  <a onclick ="drinks()" style="cursor: pointer;">DRINKS</a>
+				  <a href="#contact">PIZZA</a>
+				  <a href="#about">BREAD</a>
+				  <a href="#support">Support</a>
+				  <a href="#blog">Blog</a>
+				  <a href="#tools">Tools</a>
+				  <a href="#base">Base</a>
+				  <a href="#custom">Custom</a>
+				  <a href="#more">More</a>
+				  <a href="#logo">Logo</a>
+				  <a href="#friends">Friends</a>
+				  <a href="#partners">Partners</a>
+				  <a href="#people">People</a>
+				  <a href="#work">Work</a>
+				</div>
+				
+				</div>
+				</div>
+				<div id="catd">
+				
+				<div align="center" style="width:73%;box-shadow: 5px 5px 10px #888888;height:20px;background-color:#8a6d3b;;margin-top:20px;cursor: context-menu;" >
+							<div align="center"><span style="margin-top:0px;color:#fff;"><b>FRESH</b></span></div>
+						</div>
+				
+					<button onclick ="fruits()" align="center"id="cbut"style="width:90%;height:40px;box-shadow: 5px 5px 10px #888888;margin-left:0%;margin-top:7px;cursor: pointer;background-color:#215050;border:none;" >
+							<span style="color:#fff;"><b>FRUITS</b></span>
+						</button>
+						
+						<button onclick ="drinks()" align="center"id="cbut"style="width:90%;box-shadow: 5px 5px 10px #888888;border:none;height:40px;background-color:#215050;margin-left:0%;margin-top:7px;cursor: pointer;" >
+							<span style="color:#fff;"><b>DRINKS</b></span>
+						</button>
+						
+						<div align="center"style="width:73%;box-shadow: 5px 5px 10px #888888;height:20px;background-color:#8a6d3b;;margin-top:20px;cursor: context-menu;" >
+							<div align="center"><span style="margin-top:0px;color:#fff;"><b>BAKED</b></span></div>
+						</div>
+						<button onclick ="()" align="center"id="cbut"style="width:90%;box-shadow: 5px 5px 10px #888888;border:none;;height:40px;background-color:#215050;margin-left:0%;margin-top:7px;cursor: pointer;" >
+							<span style="color:#fff;"><b>PIZZA</b></span>
+						</button>
+						<button onclick ="()" align="center"id="cbut"style="width:90%;box-shadow: 5px 5px 10px #888888;border:none;height:40px;background-color:#215050;margin-left:0%;margin-top:7px;cursor: pointer;" >
+							<span style="color:#fff;"><b>BREAD</b></span>
+						</button>
+				
+				</div>
+				</div>
+				<!-- ITEM -->
+				
+				<div class="col-sm-4"  style="margin-bottom:25px;">
+					
+					
+					
+					<div  id="fruits">
+					<table  align="center" style="min-width:94%;background-color:lavender;font-size:15px;" >
+					<div >
+					
+						<div style="box-shadow: 5px 5px 10px #888888;height:40px;background-color:#215050;" >
+							<span style="float:left;margin-left:45%;margin-top:10px;color:#fff;"><b>FRUITS</b></span>
+						</div>
+						
+					
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;background-color:lavender;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Apple</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Apple" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;background-color:#fff;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Orange</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 200</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Orange" data-price="200">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Pears</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 150</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Pears" data-price="150">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;background-color:#fff;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Banana</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Banana" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Chiku</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Chiku" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;background-color:#fff;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Mango</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 250</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Mango" data-price="250">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Grapes</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Grapes" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Grapes</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Grapes" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Grapes</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Grapes" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Grapes</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Grapes" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Grapes</th>
+						<th style="float:right;margin-right:25px;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Grapes" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						
+						<!--tr  style="height:30px;"><div><th><span style="float:left;margin-left:10px;"><a class = "add-to-cart" href="#" data-name="Apple" data-price="50">Apple </a></span></th><th><span style="float:left;"> &#x20b9; 50</span></th></div></tr>
+						<tr style="height:30px;"><div><th><span style="float:left;margin-left:10px;"><a class = "add-to-cart" href="#" data-name="Orange" data-price="20">Orange </a></span></th><th><span style="float:left;"> &#x20b9; 20</span></th></div></tr>
+						<tr style="height:30px;"><div><th><span style="float:left;margin-left:10px;"><a class = "add-to-cart" href="#" data-name="Banana" data-price="5">Banana </a></span></th><th><span style="float:left;"> &#x20b9; 5</span></th></div></tr>
+						<tr style="height:30px;"><div><th><span style="float:left;margin-left:10px;"><a class = "add-to-cart" href="#" data-name="Pears" data-price="35">Pears </a></span></th><th><span style="float:left;"> &#x20b9; 35</span></th></div></tr>
+						<tr style="height:30px;"><div><th><span style="float:left;margin-left:10px;"><a class = "add-to-cart" href="#" data-name="Kuchu" data-price="100">Kuchu </a></span></th><th><span style="float:left;"> &#x20b9; 100</span></th></div></tr-->
+					</div>
+					</table>
+					</div>
+					
+					<div id="drinks">
+					<table  align="center" style="min-width:94%;background-color:lavender;" >
+						
+						<div style="box-shadow: 5px 5px 10px #888888;height:40px;background-color:#215050" >
+							<span style="float:left;margin-left:45%;margin-top:10px;color:#fff;"><b>DRINKS</b></span>
+						</div>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Coke</th>
+						<th style="float:right;margin-left:12px;;margin-top:15px;"><span > &#x20b9; 200</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Coke" data-price="200">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;background-color:#fff;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Fanta</th>
+						<th style="float:right;margin-left:12px;;margin-top:15px;"><span > &#x20b9; 100</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Fanta" data-price="100">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						<tr style="box-shadow: 5px 5px 10px #888888;height:50px;"><div><th style="float:left;margin-left:25px;margin-top:15px;">Pepsi</th>
+						<th style="float:right;margin-left:12px;;margin-top:15px;"><span > &#x20b9; 150</span></th>
+						<th><span><a class = "add-to-cart"  data-name="Pepsi" data-price="150">
+						<button style="float:right;margin-right:25px;" class="plus-item1">ADD</button></a></span></th></div></tr>
+						
+						</table>
+					</div>
+				</div>
+				
+				
+				
+				<!-- CART -->
+				<div   align="center"class="col-sm-4" style="margin-top:.5%;margin-left:.5%;" >
+				<div id="cartd">
+					<div style=";box-shadow: 3px 3px 10px #888888;">
+					<span style="float:left;background-color:rgba(26, 49, 68, 0.83);box-shadow: 5px 5px 10px #888888;color:#fff;border-radius:5%;padding:5px 5px;"> Cart </span>
+						<button class = "button" style="float: right;background-color:#8a6d3b;padding:9px 9px;" id = "clear-cart"> Clear Cart </button>
+					</div>
+					<div  style="background-color:rgba(230, 230, 250, 0.73);height:145px;overflow: scroll;overflow-x: hidden;width:90%;box-shadow: 3px 3px 10px #888888;">
+						<div style="margin-right:1%;margin-top:7px;margin-bottom:7px;" id="show-cart" ></div>
+					</div>
+					<div  style="">
+						<span style="float:left;padding:5px 5px;box-shadow: 3px 3px 10px #888888;color:#fff;background-color:#215050">Total: &#x20b9; </span>
+						<span style="float:left;box-shadow: 3px 3px 10px #888888;background-color:#215050;color:#fff;padding:5px 5px"id="total-cart"></span>
+						<button onclick="checkout()" class = "button" style="float: right;padding:10px 10px;"> Checkout -> </button>
+					</div>
+					<div style="background-color:orange;" id="minord"></div>
+				</div>	
+				
+				
+				<div id="myModal" class="modal">
+
+				  <!-- Modal content -->
+				  <div class="modal-content">
+					<span class="close"></span>
+					<div id="">
+					<div style=";box-shadow: 3px 3px 10px #888888;">
+					<span style="float:left;background-color:rgba(26, 49, 68, 0.83);box-shadow: 5px 5px 10px #888888;color:#fff;border-radius:5%;padding:5px 5px;"> Cart </span>
+						<button class = "button" style="float: right;background-color:#8a6d3b;padding:9px 9px;" id = "clear-cart2"> Clear Cart </button>
+						
+					</div>
+					<div  style="background-color:;height:145px;overflow: scroll;overflow-x: hidden;width:100%;">
+						<div style="margin-right:1%;margin-top:7px;margin-bottom:7px;" id="show-cart2" ></div>
+					</div>
+					<div  style="">
+						<span style="float:left;padding:5px 5px;box-shadow: 3px 3px 10px #888888;color:#fff;background-color:#215050">Total: &#x20b9; </span>
+						<span style="float:left;box-shadow: 3px 3px 10px #888888;background-color:#215050;color:#fff;padding:5px 5px"id="total-cart3"></span>
+						<button onclick="checkout2()" class = "button" style="float: right;padding:10px 10px;"> Checkout -> </button>
+					</div>
+					<div style="background-color:orange;" id="minord2"></div>
+				</div>	
+				  </div>
+
+				</div>
+				
+				<div class="cartm" id="footer" style="color:#fff;">
+				<div id="myBtn"><span style="cursor: pointer;">
+				<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+					<span style="float:left;padding:5px 5px;box-shadow: 3px 3px 10px #888888;color:#fff;background-color:#215050">Total: &#x20b9; </span>
+						<span style="float:left;box-shadow: 3px 3px 10px #888888;background-color:#215050;color:#fff;padding:5px 5px"id="total-cart2"></span></span>
+						
+
+					</div>	
+					<span style="background-color:orange;;font-size:15px;color:#000;" id="minord3"></span>
+							<button onclick="checkout3()" class = "button" style="float: right;padding:7px 10px;"> Checkout -> </button>
+				</div>
+				
+				
+				</div>
+				<div class="col-sm-1"></div>
+			</div>
+			
+			
+		</div>
+		
+		
+	
+
+
+
+		
+		<script>	
+$(window).scroll(function(){
+    if ($(window).scrollTop() >= 100) {
+       $('.sticky-header').addClass('fixed');
+    }
+    else {
+       $('.sticky-header').removeClass('fixed');
+    }
+});		
+		
+		// Get the modal
+var modal = document.getElementById('myModal');
+
+// Get the button that opens the modal
+var btn = document.getElementById("myBtn");
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks the button, open the modal
+btn.onclick = function() {
+    modal.style.display = "block";
+}
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() {
+    modal.style.display = "none";
+}
+
+// When the user clicks anywhere outside of the modal, close it
+window.onclick = function(event) {
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+							
+						
+						hide();
+						function hide() { 
+							document.getElementById('drinks').style.display='none'; 
+							
+							//document.getElementById('b1').style.display='none'; 
+							//document.getElementById('b3').style.display='none'; 
+							//document.getElementById('b5').style.display='none'; 
+						} 
+						show();
+						function show(){
+							document.getElementById('fruits').style.display='block';
+						}
+		
+		
+				function fruits() {
+						
+						hide();
+						function hide() { 
+							document.getElementById('drinks').style.display='none'; 
+							
+							//document.getElementById('b1').style.display='none'; 
+							//document.getElementById('b3').style.display='none'; 
+							//document.getElementById('b5').style.display='none'; 
+						} 
+						show();
+						function show(){
+							document.getElementById('fruits').style.display='block';
+						}
+				}
+				function drinks() {
+						
+						hide();
+						function hide() { 
+							document.getElementById('fruits').style.display='none'; 
+							
+							//document.getElementById('b1').style.display='none'; 
+							//document.getElementById('b3').style.display='none'; 
+							//document.getElementById('b5').style.display='none'; 
+						} 
+						show();
+						function show(){
+							document.getElementById('drinks').style.display='block';
+						}
+				}
+				
+
+				
+				$(".add-to-cart").click(function(event){
+					event.preventDefault(); //Wont jump to Top of page On click
+					var name = $(this).attr("data-name");
+					var price = Number($(this).attr("data-price"));
+					
+					shoppingCart.addItemToCart(name,price,1);
+					displayCart();
+				});
+				
+				$("#clear-cart").click(function(event){
+					shoppingCart.clearCart();
+					displayCart();
+				});
+				$("#clear-cart2").click(function(event){
+					shoppingCart.clearCart();
+					displayCart();
+				});
+				
+				
+				
+				
+				
+				
+				function displayCart() {
+					//console.log("***Display Cart*** ");
+					
+					var cartArray = shoppingCart.listCart();
+					//console.log("***Display Cart*** :"+cartArray.length);
+					
+					var output = "";
+					for(var i in cartArray) {
+						output += "<tbody>"+"<tr >"+"<td>"
+							+cartArray[i].name+"</td>"+"<td>"
+							+" <button class='subtract-item' data-name='"
+							+cartArray[i].name+"'>-</button>"+"</td>"+"<td>"
+							+" "+cartArray[i].count+"</td>"+"<td>"
+							+" <button class ='plus-item' data-name='"
+							+cartArray[i].name+"'>+</button>"+"</td>"+"<td>"
+							+" "/*+cartArray[i].price*/+"</td>"+"<td>"
+							+" "+" &#x20b9;"+cartArray[i].total+"</td>"+"<td>"
+							//+" <button class='subtract-item' data-name='"
+							//+cartArray[i].name+"'>-</button>"
+							//+" <button class ='plus-item' data-name='"
+							//+cartArray[i].name+"'>+</button>"
+							+" <button class ='delete-item' data-name='"
+							+cartArray[i].name+"'>x</button>"+"</td>"
+							+"</tr>"+"</tbody>";
+					}
+					$("#show-cart").html(output);
+					$("#show-cart2").html(output);
+					$("#total-cart").html(shoppingCart.totalCart());
+					$("#total-cart2").html(shoppingCart.totalCart());
+					$("#total-cart3").html(shoppingCart.totalCart());
+					
+				}
+				
+				$("#show-cart").on("click",".delete-item", function(event){
+						var name = $(this).attr("data-name");
+						shoppingCart.removeItemFromCartAll(name);
+						displayCart();
+				});
+				
+				$("#show-cart").on("click",".subtract-item", function(event){
+						var name = $(this).attr("data-name");
+						shoppingCart.removeItemFromCart(name);
+						displayCart();
+				});
+				
+				$("#show-cart").on("click",".plus-item", function(event){
+						var name = $(this).attr("data-name");
+						shoppingCart.addItemToCart(name,0,1);
+						displayCart();
+				});
+				
+				$("#show-cart2").on("click",".delete-item", function(event){
+						var name = $(this).attr("data-name");
+						shoppingCart.removeItemFromCartAll(name);
+						displayCart();
+				});
+				
+				$("#show-cart2").on("click",".subtract-item", function(event){
+						var name = $(this).attr("data-name");
+						shoppingCart.removeItemFromCart(name);
+						displayCart();
+				});
+				
+				$("#show-cart2").on("click",".plus-item", function(event){
+						var name = $(this).attr("data-name");
+						shoppingCart.addItemToCart(name,0,1);
+						displayCart();
+				});
+				
+				
+				
+			
+				
+				
+				//*************************************************
+				//Shopping Cart Func
+				
+				//OBJ IN ARR ( Possible ), But Cart should be Empty Initially
+				//name price cart
+				//var cart = [{name:"brush",price:1.99,count:3},{name:"brush2",price:1.99,count:8}];
+				
+				//var cart = []; //Empty Cart
+				
+				
+				
+				/*
+					// {name:"Brush",price:1.99,count:1}
+					//Creating Obj
+					var brush = new Item("Brush",1.99,1);
+					
+					//console.log(a);
+					
+					//ADD TO CART
+					cart.push(new Item("Apple",2.13,1));
+					cart.push(brush);
+					
+					//PRINT CART
+					for(var i=0;i<cart.length;i++){
+						console.log(cart[i]);
+					}
+				*/
+				
+				//**********************************************************************
+				//	Shopping Cart Functions
+				
+				//Converting Shopping Cart in Single Obj
+				var shoppingCart = {};
+				shoppingCart.cart = []; //cart now belongs to shoppingCart
+				
+				//Func To Genertae Obj
+				shoppingCart.Item = function(name,price,count) {
+					this.name = name
+					this.price = price
+					this.count = count
+				};
+				
+				
+				//addItemToCart
+				shoppingCart.addItemToCart = function(name,price,count){
+					//Count of Item of same Name
+					for(var i in this.cart) {
+						if(this.cart[i].name === name) {
+							this.cart[i].count += count ;
+							this.saveCart(); //Save before return
+							return;
+						}
+					}
+					//Add New Item
+					var item = new this.Item(name,price,count);
+					this.cart = this.cart || [];
+					this.cart.push(item);
+					this.saveCart();
+				};
+				
+				/*
+					//Test Cart
+					addItemToCart("Apple",1.22,1);
+					addItemToCart("Orange",3.55,4);
+					addItemToCart("Apple",1.22,3);
+					addItemToCart("Kuchu",100.22,5);
+					addItemToCart("Shoe",10.72,3);
+					
+					console.log(cart);
+					console.log(cart[0]);
+					console.log(cart[1]);
+					//console.log(cart[0].name);
+				*/
+				
+				//  a = 3 	-> Assignment op
+				// 	"3" == 3  ->	true
+				//	"3" === 3 	->   false
+				
+				//removeItemFromCart, Remove one item
+				shoppingCart.removeItemFromCart = function(name){
+					for(var i in this.cart) {
+						if(this.cart[i].name === name) {
+							this.cart[i].count-- ;
+							//Remove Item Name from Cart, The Item, No. of Item
+							if(this.cart[i].count === 0) {
+								this.cart.splice(i, 1);
+							}
+							break;
+						}
+					}
+					this.saveCart();
+				};
+				
+				/*
+					//Test Cart
+					console.log(cart[0].count);
+					
+					removeItemFromCart("Apple");
+					removeItemFromCart("Apple");
+					removeItemFromCart("Apple");
+					removeItemFromCart("Apple");
+					//removeItemFromCart("Apple");
+					//removeItemFromCart("Apple");
+					
+					console.log(cart[0].count);
+					console.log(cart);
+				*/
+				
+				//	removeItemFromCartAll(name) //Removes all item name
+				shoppingCart.removeItemFromCartAll = function(name){
+					for(var i in this.cart) {
+						if(this.cart[i].name === name){
+							this.cart.splice(i,1);
+							break;
+						}
+					}
+					this.saveCart();
+				};
+				
+				/*
+					//Test Cart
+					addItemToCart("Apple",1.22,1);
+					addItemToCart("Orange",3.55,4);
+					addItemToCart("Apple",1.22,3);
+					addItemToCart("Kuchu",100.22,10);
+					
+					console.log(cart.length);
+					console.log(cart);
+					
+					removeItemFromCartAll("Apple");
+					
+					console.log(cart.length);
+					console.log(cart);
+				*/	
+				
+				//	clearCart()
+				shoppingCart.clearCart = function() {
+					this.cart = [];
+					this.saveCart();
+				};
+				
+				/*
+					clearCart();
+					console.log(cart);
+				*/
+				
+				//	countCart()	-> return total Count
+				shoppingCart.countCart = function(){
+					var totalCount = 0;
+					for(var i in cart) {
+						totalCount += this.cart[i].count;
+					}
+					return totalCount;
+				};
+				
+				//Print Total Item in Cart
+				//console.log(countCart());
+				
+				//	totalCart()	->	return total cost
+				
+				shoppingCart.totalCart = function() {
+					var totalCost = 0;
+					for(var i in this.cart) {
+						totalCost += this.cart[i].price * this.cart[i].count;
+					}
+					return totalCost.toFixed(2);
+				};
+				
+				//Print Total of Cart
+				//console.log(totalCart());
+				
+				
+				
+				//	listCart()	->	array of Item ( CopyCart)
+				shoppingCart.listCart = function(){
+					var cartCopy = [];
+					for(var i in this.cart) {
+						var item = this.cart[i];
+						var itemCopy = {};
+						for(var p in item) {
+							itemCopy[p] = item[p] ;
+						}
+						itemCopy.total = (item.price * item.count).toFixed(2) ;
+						cartCopy.push(itemCopy);
+					}
+					return cartCopy;
+					//return cart;
+					//return cart.slice();
+				};
+				
+				/*
+					//PrintCopyCart Test
+					var array = listCart();
+					array[0].name = "Mistake";
+					console.log( array);
+				*/
+				
+				/*
+					var a = ["A","B","C"];
+					var b = a; //Doesnot create copy ,Instead give Refernece to Original Copy(Same Address)
+					b.push("D");
+					// a & b have same content
+					console.log(a);
+					console.log(b);
+				*/	
+				/*
+					//COPY ARR -> slice()
+					var a = ["A","B","C"];
+					//Easy Way to Copy Array is Slice
+					var b = a.slice();
+					b.push("D");
+					// a & b have different content
+					console.log(a);
+					console.log(b);
+				*/
+				/*
+					var a = {age:22,name:"kuchu"}
+					var b = a;
+					b.name = "chugu";
+					//Prints chugu in both
+					console.log(a);
+					console.log(b);
+				*/
+				
+				//	saveCart() --> to local Storage
+				shoppingCart.saveCart = function(){
+					localStorage.setItem("shoppingCart",JSON.stringify(this.cart)); //Convert Cart into JSON String
+				};
+				
+				/*
+					localStorage.setItem("age", "50");
+					localStorage.setItem("username", "Kuchua");
+				*/
+				
+				//	loadCart()  --> From local Storage
+				shoppingCart.loadCart = function(){
+					this.cart = JSON.parse(localStorage.getItem("shoppingCart"));
+				};
+				
+				shoppingCart.loadCart();
+				displayCart(); // Display After Load
+				
+				var array = shoppingCart.listCart();
+				//console.log("---------------------");
+				console.log(array);
+				
+				function checkout() {
+					
+					if(shoppingCart.totalCart() < 200){
+						//print min order is 200
+						document.getElementById("minord").innerHTML = "Min Order: &#x20b9; 200";
+						//document.getElementById("minord2").innerHTML = "Min Order: &#x20b9; 200";
+						//document.getElementById("minord3").innerHTML = "Min Order: &#x20b9; 200";
+					}
+					else{
+						location.href = "#check";
+					}
+					
+				
+				}
+				function checkout2() {
+					
+					if(shoppingCart.totalCart() < 200){
+						//print min order is 200
+						//document.getElementById("minord").innerHTML = "Min Order: &#x20b9; 200";
+						document.getElementById("minord2").innerHTML = "Min Order: &#x20b9; 200";
+						//document.getElementById("minord3").innerHTML = "Min Order: &#x20b9; 200";
+					}
+					else{
+						location.href = "#check";
+					}
+					
+				
+				}
+				function checkout3() {
+					
+					if(shoppingCart.totalCart() < 200){
+						//print min order is 200
+						//document.getElementById("minord").innerHTML = "Min Order: &#x20b9; 200";
+						//document.getElementById("minord2").innerHTML = "Min Order: &#x20b9; 200";
+						document.getElementById("minord3").innerHTML = "Min Order: &#x20b9; 200";
+					}
+					else{
+						location.href = "#check";
+					}
+					
+				
+				}
+				
+				
+				  
+		</script>
